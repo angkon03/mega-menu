@@ -112,6 +112,9 @@ nav .wrapper .logo a{
     cursor: pointer;
     display: none;
 }
+.wrapper .btn.menu-btn{
+    margin-top: 8px;
+}
 .wrapper .btn.cancel-btn{
     position: absolute;
     right: 30px;
