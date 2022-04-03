@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <section>
+        <nav>
+            <div class="wrapper">
+                <div class="logo"><a href="#">Angkon</a></div>
+                <ul class="nav-links">
+                    <label for="" class="btn cancel-btn"><i class="fas fa-xmark fa-2x"></i></label>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li id="drp-menu"><a href="#">Dropdown Menu</a>
+                        <ul class="drop-menu">
+                            <li><a href="#">Dropdown Menu 1</a></li>
+                            <li><a href="#">Dropdown Menu 2</a></li>
+                            <li><a href="#">Dropdown Menu 3</a></li>
+                            <li><a href="#">Dropdown Menu 4</a></li>
+                        </ul>
+                    </li>
+                    <li id="mg-menu"><a href="#">Mega Menu</a>
+                        <div class="mega-box">
+                            <div class="content">
+                                <div class="row">
+                                    <img src="assets/images/top1.jpg" alt="Mega Menu Image">
+                                </div>
+                                <div class="row">
+                                    <header>Design Services</header>
+                                    <ul class="mega-links">
+                                        <li><a href="#">Graphics</a></li>
+                                        <li><a href="#">Vectors</a></li>
+                                        <li><a href="#">Business Cards</a></li>
+                                        <li><a href="#">Custom logo</a></li>
+                                    </ul>
+                                </div>
+                                <div class="row">
+                                    <header>Email Services</header>
+                                    <ul class="mega-links">
+                                        <li><a href="#">Personal Email</a></li>
+                                        <li><a href="#">Business Email</a></li>
+                                        <li><a href="#">Mobile Email</a></li>
+                                        <li><a href="#">Web Marketing</a></li>
+                                    </ul>
+                                </div>
+                                <div class="row">
+                                    <header>Security Services</header>
+                                    <ul class="mega-links">
+                                        <li><a href="#">Site Seal</a></li>
+                                        <li><a href="#">VPS Hosting</a></li>
+                                        <li><a href="#">Privacy Seal</a></li>
+                                        <li><a href="#">Website Design</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+                <label for="" class="btn menu-btn"><i class="fas fa-bars fa-2x"></i></label>
+            </div>
+        </nav>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('#drp-menu').on('click',function(){
+            $('.mega-box').slideUp(100);
+            $('.drop-menu').slideToggle();
+        });
+        $('#mg-menu').on('click',function(){
+            $('.drop-menu').slideUp(100);
+            $('.mega-box').slideToggle();
+        })
+        $('.menu-btn').on('click',function(){
+            $('.nav-links').slideToggle(200);
+        })
+        $('.cancel-btn').on('click',function(){
+            $('.nav-links').slideUp(200);
+        })
+        $( window ).resize(function() {
+            if($( window ).width() >= 849) {
+                $('.nav-links').css('display','inline-flex');
+            }
+            else{
+                $('.nav-links').css('display','none');
+            }
+        });
+    </script>
+
+</body>
+</html>
